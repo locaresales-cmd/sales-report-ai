@@ -25,7 +25,7 @@ class SalesReport(BaseModel):
     verbal_ability: str = Field(description="言語力（評価メモ）", default="")
     q_and_a: str = Field(description="質疑応答の内容要約（全体的なまとめ）", default="")
     next_action: str = Field(description="次回アクション・ネクストステップ", default="")
-    impression: str = Field(description="所感・備考", default="")
+    impression: str = Field(description="所感・備考（※重要：必ず1つの文字列として出力してください。辞書型や複数キーのJSONオブジェクトには分割せず、Good/More/Summary等がある場合は改行を含めた1つの文章（文字列）にまとめて出力すること）", default="")
     
     # Detailed Scores (For Radar Chart)
     negotiation_attitude: str = Field(description="商談態勢（0-100の評価）", default="")
